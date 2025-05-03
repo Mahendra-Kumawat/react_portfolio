@@ -15,7 +15,7 @@ export function SkillsSection() {
   const isVisible = true
 
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="pt-24">
 
       <h2 className={cn(
         "text-4xl md:text-5xl font-bold text-center mb-12 text-foreground",

@@ -75,3 +75,13 @@ export const projects = [
     liveUrl: "#",
   },
 ];
+
+
+
+
+// mobile Menu sidebar data 
+export const data = {
+  title : "Welcome Developer",
+  description : " Welcome to my portfolio! I'm a frontend developer passionate about crafting responsive, user-friendly web applications. Here you'll find a collection of my projects, and skills - built with clean code and creative design in mind.",
+  btnTitle : "Close Sidebar"
+}

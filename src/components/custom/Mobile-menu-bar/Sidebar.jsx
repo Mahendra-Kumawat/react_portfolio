@@ -12,6 +12,7 @@ import {
 import { MenuIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-scroll';
+import { data } from '@/constants/CustomData/PortfolioData';
 
 const Sidebar = ({ navItems }) => {
 
@@ -24,11 +25,6 @@ const Sidebar = ({ navItems }) => {
   }
 
 
-  console.log("inside the sidebar")
-
-
-  console.log(navItems)
-
   return (
     <aside>
       <Sheet open={openSidebar} onOpenChange={setOpenSidebar} >
@@ -39,24 +35,28 @@ const Sidebar = ({ navItems }) => {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Welcome Developer</SheetTitle>
+            <SheetTitle>{data.title}</SheetTitle>
             <SheetDescription>
-            Welcome to my portfolio! I'm a frontend developer passionate about crafting responsive, user-friendly web applications. Here you'll find a collection of my projects, and skills - built with clean code and creative design in mind.
+              {
+                data.description
+              }
             </SheetDescription>
           </SheetHeader>
-          {navItems.map(({route , label}) => (
+          {navItems.map(({ route, label }) => (
             <Button
-            onClick={closeSidebarHandler}
-            variant="ghost" className="text-sm font-medium text-muted-foreground hover:text-foreground" key={route} asChild>
+              onClick={closeSidebarHandler}
+              variant="ghost" className="text-sm font-medium text-muted-foreground hover:text-foreground" key={route} asChild>
               <Link to={route} smooth={true} duration={500} className='cursor-pointer'>
-                {label} 
+                {label}
               </Link>
             </Button>
           ))}
 
           <SheetFooter>
             <SheetClose asChild>
-              <Button type="submit">Close Sidebar</Button>
+              <Button type="submit">{
+                data.btnTitle
+              }</Button>
             </SheetClose>
           </SheetFooter>
         </SheetContent>

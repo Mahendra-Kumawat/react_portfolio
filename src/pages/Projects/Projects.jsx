@@ -11,14 +11,12 @@ import { FaGithubSquare } from "react-icons/fa";
 import { projects } from "@/constants/CustomData/PortfolioData";
 
 
-
-
 export function ProjectsSection() {
   // const sectionRef = useRef<HTMLDivElement>(null);
   const isVisible = true;
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="pt-24">
 
       <h2 className={cn(
         "text-4xl md:text-5xl font-bold text-center mb-12 text-foreground opacity-100",
@@ -57,7 +55,6 @@ export function ProjectsSection() {
             </CardContent>
             <CardFooter className="flex flex-col sm:flex-row  justify-end gap-2 pt-4">
               {project.githubUrl && (
-
                 <Button variant="outline" size="sm" asChild className="w-full  sm:w-fit">
                   <Link to={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <FaGithubSquare className="mr-2 h-4 w-4" />
