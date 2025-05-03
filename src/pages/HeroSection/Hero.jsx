@@ -6,6 +6,8 @@ import { ArrowDown, } from 'lucide-react';
 // import { useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { NavLink } from 'react-router';
+import { headlineData } from '@/constants/CustomData/PortfolioData';
 
 export function HeroSection() {
   const isVisible = true;
@@ -14,9 +16,8 @@ export function HeroSection() {
   const linkedinUsername = import.meta.env.VITE_MY_LINKEDIN;
 
 
-
   return (
-    <section id="home" className="relative pt-14 md:pt-0 overflow-hidden">
+    <section id="home" className="relative z-40 pt-14 pb-10 md:pt-10 lg:pt-0 overflow-hidden">
 
       <div className="grid grid-cols-1 md:grid-cols-2  gap-6  items-center">
         <div className={cn(
@@ -27,7 +28,9 @@ export function HeroSection() {
             Hi, I&apos;m {myName}
           </h1>
           <p className="text-lg md:text-xl max-w-xl mx-auto md:mx-0">
-            A passionate Full-Stack Developer crafting modern, interactive web experiences.
+            {
+              headlineData
+            }
           </p>
           <div className="flex justify-center flex-col [@media(min-width:480px)]:flex-row md:justify-start gap-4">
             <Button asChild size="lg">
@@ -38,43 +41,43 @@ export function HeroSection() {
             </Button>
           </div>
           <div className="flex justify-center md:justify-start gap-2 pt-4">
-              <span className='p-2 rounded-md hover:bg-accent '>
-              <Link to={`https://github.com/${githubUsername}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+            <span className='p-2 rounded-md hover:bg-accent hover:cursor-pointer'>
+              <NavLink to={`https://github.com/${githubUsername}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                 <FaGithubSquare className="h-7  w-7 text-muted-foreground hover:text-foreground" />
-              </Link>
-              </span>
-           
-           <span className='p-2 rounded-md hover:bg-accent'>
-              <Link to={`https://linkedin.com/in/${linkedinUsername}`} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              </NavLink>
+            </span>
+
+            <span className='p-2 rounded-md hover:bg-accent hover:cursor-pointer'>
+              <NavLink to={`https://linkedin.com/in/${linkedinUsername}`} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                 <FaLinkedin className="h-7 w-7 text-muted-foreground hover:text-foreground" />
-              </Link>
-           </span>
-           
+              </NavLink>
+            </span>
+
           </div>
         </div>
         <div className={cn(
-          "relative flex justify-center items-center opacity-100",
+          "relative flex justify-center bg-transparent items-center opacity-100",
           isVisible && "animate-fade-in animation-delay-400"
         )}>
           {/* Placeholder for a professional photo or illustration */}
-          <div className="overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 border-background">
+          <div className="overflow-hidden">
             <img
-              src="https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?t=st=1746182024~exp=1746185624~hmac=87bd88f7843114e32752c6f832b8b7f9499987926022afabdb2cb2d505a8d280&w=740"
+              src="/images/Heros.png" // Replace with your image path
               alt="Your Name - Professional Photo"
               // width={400}
               // height={400}
-              className="object-cover w-full h-full aspect-[4/5]"
+              loading='lazy'
+              className="object-cover w-full h-full"
               // fetchPriority='high'
               data-ai-hint="professional headshot"
             />
           </div>
         </div>
       </div>
-
       {/* Subtle animated arrow pointing down */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-        <Link to="about" aria-label="Scroll to About section">
-          <ArrowDown className="h-6 w-6 font-semibold text-muted-foreground hover:text-primary" />
+      <div className="absolute bottom-0  left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+        <Link to="about" smooth={true} duration={500} aria-label="Scroll to About section">
+          <ArrowDown className="h-6 w-6 hover:cursor-pointer font-bold text-muted-foreground hover:text-primary" />
         </Link>
       </div>
     </section>

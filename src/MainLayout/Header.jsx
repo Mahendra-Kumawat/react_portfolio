@@ -1,12 +1,13 @@
 
 import React, { useMemo } from "react"
-import { Code, Briefcase, User, Mail, FolderGit2, BrainCircuit, Icon, MenuIcon } from "lucide-react";
+import { Code, User, Mail, FolderGit2, BrainCircuit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Wrapper from "@/components/custom/Container/Wrapper";
 import { cn } from "@/lib/utils";
 import Sidebar from "@/components/custom/Mobile-menu-bar/Sidebar";
 import { Link } from "react-scroll";
 import { NavLink } from "react-router";
+import { ThemeToggle } from "@/components/ThemeComponents/ThemeToggler";
 
 
 export function Header() {
@@ -34,11 +35,10 @@ export function Header() {
   ], []);
 
 
-
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full bg-background/40  border-border/40  backdrop-blur transition-shadow duration-300",
+        "sticky top-0 z-50 w-full bg-background/20  border-border/40  backdrop-blur transition-shadow duration-300",
         isScrolled ? "shadow-md" : ""
       )}
     >
@@ -52,8 +52,8 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            {navItems?.map(({route , label}) => (
-              <Button variant="ghost" className="text-sm font-medium text-muted-foreground hover:text-foreground" key={route} asChild>
+            {navItems?.map(({ route, label }) => (
+              <Button variant="ghost" className="text-sm font-medium text-foreground hover:text-muted-foreground" key={route} asChild>
                 <Link smooth={true} duration={500} to={route} className="cursor-pointer">
                   {label}
                 </Link>
@@ -61,11 +61,16 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Mobile Navigation */}
-          <div className="md:hidden">
 
-            <Sidebar navItems={navItems} />
+          <div className="flex gap-3"> 
+            {/* Mobile Navigation */}
+            <div className="md:hidden">
+              <Sidebar navItems={navItems} />
+            </div>
 
+            <div>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </Wrapper>

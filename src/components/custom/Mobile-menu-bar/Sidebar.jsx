@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import { MenuIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router';
+import { Link } from 'react-scroll';
 
 const Sidebar = ({ navItems }) => {
 
@@ -26,6 +26,9 @@ const Sidebar = ({ navItems }) => {
 
   console.log("inside the sidebar")
 
+
+  console.log(navItems)
+
   return (
     <aside>
       <Sheet open={openSidebar} onOpenChange={setOpenSidebar} >
@@ -36,24 +39,24 @@ const Sidebar = ({ navItems }) => {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
+            <SheetTitle>Welcome Developer</SheetTitle>
             <SheetDescription>
-              Make changes to your profile here. Click save when you're done.
+            Welcome to my portfolio! I'm a frontend developer passionate about crafting responsive, user-friendly web applications. Here you'll find a collection of my projects, and skills - built with clean code and creative design in mind.
             </SheetDescription>
           </SheetHeader>
-          {navItems.map((item) => (
+          {navItems.map(({route , label}) => (
             <Button
             onClick={closeSidebarHandler}
-            variant="ghost" className="text-sm font-medium text-muted-foreground hover:text-foreground" key={item.label} asChild>
-              <Link to={item.href}>
-                {item.label}
+            variant="ghost" className="text-sm font-medium text-muted-foreground hover:text-foreground" key={route} asChild>
+              <Link to={route} smooth={true} duration={500} className='cursor-pointer'>
+                {label} 
               </Link>
             </Button>
           ))}
 
           <SheetFooter>
             <SheetClose asChild>
-              <Button type="submit">Save changes</Button>
+              <Button type="submit">Close Sidebar</Button>
             </SheetClose>
           </SheetFooter>
         </SheetContent>
