@@ -4,8 +4,9 @@ const githubUsername = import.meta.env.VITE_GITHUB_USER_NAME
 
 
 export const headlineData = `
-Hey there, I'm Mahendra Kumawat 👋
-I build modern, interactive websites with React, Next.js, and a love for great UI.
+ 
+
+Hi, 👋 I'm Mahendra Kumawat — a Frontend Developer specializing in building modern, interactive web applications using React, and a focus on great user experience.
 `
 
 
@@ -41,7 +42,7 @@ export const projects = [
 
     imageUrl: "https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=600",
     imageHint: "online shopping website",
-    tags: ["React.js", "JavaScript", "Tailwind CSS", "Shadcn UI", "Clerk"],
+    tags: ["React.js", "JavaScript", "Tailwind CSS", "Shadcn UI", "Clerk" ,"Zod" , "React Hook Form" , "Zustand"],
     githubUrl: `https://github.com/${githubUsername}`, // Example URL
     liveUrl: "#", // Replace with actual live URL if available
   },
@@ -51,7 +52,7 @@ export const projects = [
 
     imageUrl: "https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     imageHint: "dashboard task management",
-    tags: ["React", "Tailwind CSS", "Shadcn UI", "JavaScript"],
+    tags: ["React", "Tailwind CSS", "Shadcn UI", "JavaScript" , "React Hook Form" , "Zod" , "Zustand"],
     githubUrl: `https://github.com/${githubUsername}`, // Example URL
     liveUrl: "#",
   },
@@ -65,15 +66,15 @@ export const projects = [
     githubUrl: `https://github.com/${githubUsername}`, // Example URL
     liveUrl: "#",
   },
-  {
-    title: "Data Visualization Dashboard",
-    description: "An interactive dashboard displaying complex datasets using various chart types.",
-    imageUrl: "https://picsum.photos/600/400?random=4",
-    imageHint: "charts graphs dashboard",
-    tags: ["React", "D3.js", "Express", "MongoDB"],
-    githubUrl: `https://github.com/${githubUsername}`, // Example URL
-    liveUrl: "#",
-  },
+  // {
+  //   title: "Data Visualization Dashboard",
+  //   description: "An interactive dashboard displaying complex datasets using various chart types.",
+  //   imageUrl: "https://picsum.photos/600/400?random=4",
+  //   imageHint: "charts graphs dashboard",
+  //   tags: ["React", "D3.js", "Express", "MongoDB"],
+  //   githubUrl: `https://github.com/${githubUsername}`, // Example URL
+  //   liveUrl: "#",
+  // },
 ];
 
 
