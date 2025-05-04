@@ -6,7 +6,6 @@ import Wrapper from "@/components/custom/Container/Wrapper";
 import { cn } from "@/lib/utils";
 import Sidebar from "@/components/custom/Mobile-menu-bar/Sidebar";
 import { Link } from "react-scroll";
-import { NavLink } from "react-router";
 import { ThemeToggle } from "@/components/ThemeComponents/ThemeToggler";
 
 
@@ -41,12 +40,11 @@ export function Header() {
       )}
     >
       <Wrapper>
-
         <div className="flex h-16  items-center justify-between">
-          <NavLink to="/" className="flex items-center gap-2 mr-6" aria-label="Portfolio Pro Home">
+          <Link to="home" smooth={true} duration={500} className="flex items-center gap-2 mr-6 cursor-pointer" aria-label="Portfolio Pro Home">
             <Code className="h-6 w-6 text-primary" />
             <span className="font-bold text-xl">Mahendra</span>
-          </NavLink>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">

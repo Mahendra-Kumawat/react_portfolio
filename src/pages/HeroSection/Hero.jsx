@@ -5,16 +5,16 @@ import { ArrowDown, } from 'lucide-react';
 // import { useIsVisible } from '@/hooks/use-is-visible';
 // import { useRef } from 'react';
 import { cn } from '@/lib/utils';
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { NavLink } from 'react-router';
 import { headlineData } from '@/constants/CustomData/PortfolioData';
+
+import LinAndGit from '@/components/custom/LinAndGitComponents/LinAndGit';
+
 
 export function HeroSection() {
   const isVisible = true;
   const myName = import.meta.env.VITE_MY_NAME;
-  const githubUsername = import.meta.env.VITE_GITHUB_USER_NAME;
-  const linkedinUsername = import.meta.env.VITE_MY_LINKEDIN_USER_NAME;
 
+  console.log("inside the hero components...")
 
   return (
     <section id="home" className="relative z-40 pt-14 pb-10 md:pt-10 lg:pt-0 overflow-hidden">
@@ -40,20 +40,13 @@ export function HeroSection() {
               <Link to="contact" smooth={true} duration={500} className='cursor-pointer' >Get In Touch</Link>
             </Button>
           </div>
-          <div className="flex justify-center md:justify-start gap-2 pt-4">
-            <span className='p-2 rounded-md hover:bg-accent hover:cursor-pointer'>
-              <NavLink to={`https://github.com/${githubUsername}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                <FaGithubSquare className="h-7  w-7 text-muted-foreground hover:text-foreground" />
-              </NavLink>
-            </span>
 
-            <span className='p-2 rounded-md hover:bg-accent hover:cursor-pointer'>
-              <NavLink to={`https://linkedin.com/in/${linkedinUsername}`} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                <FaLinkedin className="h-7 w-7 text-muted-foreground hover:text-foreground" />
-              </NavLink>
-            </span>
 
-          </div>
+          {/* this components is used for show the linkedIn and GitHub icons */}
+          <LinAndGit />
+
+
+
         </div>
         <div className={cn(
           "relative flex justify-center bg-transparent items-center opacity-100",
