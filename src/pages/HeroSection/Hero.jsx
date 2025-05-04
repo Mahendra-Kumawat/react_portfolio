@@ -13,7 +13,7 @@ export function HeroSection() {
   const isVisible = true;
   const myName = import.meta.env.VITE_MY_NAME;
   const githubUsername = import.meta.env.VITE_GITHUB_USER_NAME;
-  const linkedinUsername = import.meta.env.VITE_MY_LINKEDIN;
+  const linkedinUsername = import.meta.env.VITE_MY_LINKEDIN_USER_NAME;
 
 
   return (

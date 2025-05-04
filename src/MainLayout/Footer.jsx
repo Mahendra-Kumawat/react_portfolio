@@ -9,7 +9,7 @@ export function Footer() {
 
   const githubUsername = import.meta.env.VITE_GITHUB_USER_NAME;
   const myName = import.meta.env.VITE_MY_NAME;
-  const linkedinUsername = import.meta.env.VITE_MY_LINKEDIN;
+  const linkedinUsername = import.meta.env.VITE_MY_LINKEDIN_USER_NAME;
   // const emailAddress = process.env.NEXT_PUBLIC_EMAIL_ADDRESS || "your-email@example.com";
 
 
