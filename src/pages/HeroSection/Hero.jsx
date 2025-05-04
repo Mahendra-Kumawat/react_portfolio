@@ -2,8 +2,8 @@
 import { Link } from 'react-scroll';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, } from 'lucide-react';
-// import { useIsVisible } from '@/hooks/use-is-visible';
-// import { useRef } from 'react';
+import { useIsVisible } from '@/hooks/ScrollObserver/InVisiableObserver';
+import { useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { headlineData } from '@/constants/CustomData/PortfolioData';
 
@@ -11,18 +11,23 @@ import LinAndGit from '@/components/custom/LinAndGitComponents/LinAndGit';
 
 
 export function HeroSection() {
-  const isVisible = true;
+
+  const heroRef = useRef(null);
+
+  const isVisible = useIsVisible(heroRef);
+
+  console.log(isVisible)
   const myName = import.meta.env.VITE_MY_NAME;
 
   console.log("inside the hero components...")
 
   return (
-    <section id="home" className="relative z-40 pt-14 pb-10 md:pt-10 lg:pt-0 overflow-hidden">
+    <section ref={heroRef} id="home" className="relative z-40 pt-14 pb-10 md:pt-10 lg:pt-0 overflow-hidden">
 
       <div className="grid grid-cols-1 md:grid-cols-2  gap-6  items-center">
         <div className={cn(
           "text-center md:text-left space-y-6 opacity-100",
-          isVisible && "animate-fade-in animation-delay-200"
+          isVisible && "animate-fade-in animation-delay-600"
         )}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
             Hi, I&apos;m {myName}
