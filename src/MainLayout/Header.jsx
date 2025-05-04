@@ -23,8 +23,6 @@ export function Header() {
 
 
 
-  console.log("inside the header components")
-
 
   const navItems = useMemo(() => [
     { route: "home", label: "Home", icon: User },

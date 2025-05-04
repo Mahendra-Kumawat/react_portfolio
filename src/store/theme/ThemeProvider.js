@@ -14,13 +14,10 @@ export const useThemeStore = create((set) => {
 
   const applyTheme = (theme) => {
     const root = document.documentElement;
-    console.log(root)
     root.classList.remove("light", "dark");
     root.classList.add(theme);
   };
 
-
-  console.log("inside the theme provider")
 
   // Apply on initial load
   applyTheme(resolved);

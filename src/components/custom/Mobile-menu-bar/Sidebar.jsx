@@ -27,13 +27,14 @@ const Sidebar = ({ navItems }) => {
 
   return (
     <aside>
-      <Sheet open={openSidebar} onOpenChange={setOpenSidebar} >
+      <Sheet  open={openSidebar} onOpenChange={setOpenSidebar} >
         <SheetTrigger asChild>
           <Button variant="outline" className="cursor-pointer">
             <MenuIcon />
           </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent side='bottom'>
+          <div className='max-h-[100vh] overflow-y-auto flex flex-col gap-4'>
           <SheetHeader>
             <SheetTitle>{data.title}</SheetTitle>
             <SheetDescription>
@@ -59,6 +60,8 @@ const Sidebar = ({ navItems }) => {
               }</Button>
             </SheetClose>
           </SheetFooter>
+          </div>
+
         </SheetContent>
       </Sheet>
     </aside>
