@@ -18,7 +18,7 @@ export const useThemeStore = create((set) => {
     root.classList.add(theme);
   };
 
-
+ 
   // Apply on initial load
   applyTheme(resolved);
 

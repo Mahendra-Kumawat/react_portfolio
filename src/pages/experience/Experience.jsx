@@ -25,13 +25,13 @@ export function CardDemo() {
                 <Briefcase className="w-5 h-5 text-primary" />
                 {item.role}
               </CardTitle>
-              <CardDescription className="text-sm text-muted-foreground">
+              <CardDescription className="text-base text-muted-foreground">
                 {item.company} · {item.location}
               </CardDescription>
               <p className="text-sm text-gray-500">{item.duration}</p>
             </CardHeader>
             <CardContent>
-              <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm md:text-base">
+              <ul className="list-disc list-inside space-y-1 text-gray-400 text-sm md:text-base">
                 {item.description.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
