@@ -21,12 +21,12 @@ I enjoy turning ideas into real, user-friendly products—and I'm constantly lea
 export const skills = [
   {
     title: "Frontend Development",
-    technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Tailwind CSS", "Shadcn UI"],
+    technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Tailwind CSS", "Shadcn UI" , "zustand" , "react-Query" , "redux-toolkit" , "zod"],
   },
   {
     title: "Professional Developer tools",
     tools: [
-      "Git", "GitHub", "Cursor.ai", "Postman", "VS Code", "Chrome DevTools", "Google Idx"
+      "Git", "GitHub", "Cursor.ai", "Postman", "VS Code", "Chrome DevTools", "Google Idx" , "Windsurf AI code editor"
     ]
   }
 ]
@@ -86,3 +86,26 @@ export const data = {
   description : " Welcome to my portfolio! I'm a frontend developer passionate about crafting responsive, user-friendly web applications. Here you'll find a collection of my projects, and skills - built with clean code and creative design in mind.",
   btnTitle : "Close Sidebar"
 }
+
+
+
+
+
+// src/data/experienceData.js
+export const experienceData = [
+  {
+    company: "Mahiti Infotech Pvt. Ltd.",
+    role: "Frontend Developer",
+    location: "Delhi, India",
+    description: [
+      "Designed and developed scalable, responsive UI components using React.js and Tailwind CSS for multiple web applications.",
+      "Implemented advanced CRUD operations and integrated dynamic form handling to improve data management and user interaction.",
+      "Built complex filtering and search functionalities to enhance usability and content discoverability across large datasets.",
+      "Utilized Redux Toolkit for efficient global state management, improving app performance and reducing unnecessary re-renders.",
+      "Optimized component reusability and reduced code duplication by applying design pattern principles and atomic design methodology.",
+      "Collaborated closely with backend developers to ensure seamless API integration and feature delivery.",
+      "Participated in sprint planning, daily stand-ups, and peer code reviews in an Agile development environment."
+    ]
+  }
+];
+
