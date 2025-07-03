@@ -24,12 +24,20 @@ export function HeroSection() {
           "text-center md:text-left space-y-6 opacity-100",
           isVisible && "animate-fade-in animation-delay-200"
         )}>
+          <div className='text-sm relative text-green-700 font-bold leading-2 tracking-wide border-[2px] border-green-700 rounded-lg flex justify-start gap-2 w-fit items-center py-3 px-3 '>
+            <span class="h-3 w-3 absolute top-[50%] translate-y-[-50%] animate-ping rounded-full bg-green-700"></span>
+            <span class="h-2 w-2 absolute  translate-y-[-50%] left-[14px] top-[50%] rounded-full bg-green-700"></span>
+
+          <span className='px-4 pl-5'> 
+             Hi, actively looking for job
+          </span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
             Hi, I&apos;m {myName}
           </h1>
           <p className="text-lg md:text-xl max-w-xl mx-auto md:mx-0">
             {
-              headlineData
+              headlineData 
             }
           </p>
           <div className="flex justify-center flex-col [@media(min-width:480px)]:flex-row md:justify-start gap-4">
