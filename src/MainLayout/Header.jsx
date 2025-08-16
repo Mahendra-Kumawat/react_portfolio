@@ -23,7 +23,7 @@ export function Header() {
     () => [
       { route: "home", label: "Home" },
       { route: "about", label: "About" },
-      { route: "experience", label: "Experience" },
+      // { route: "experience", label: "Experience" },
       { route: "skills", label: "Skills" },
       { route: "projects", label: "Projects" },
       { route: "contact", label: "Contact" },

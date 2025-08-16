@@ -11,7 +11,7 @@ const MainComponents = () => {
     <>
     <HeroSection />
     <AboutSection />
-    <CardDemo />
+    {/* <CardDemo /> */}
     <SkillsSection />
     <ProjectsSection />
     <ContactSection />
