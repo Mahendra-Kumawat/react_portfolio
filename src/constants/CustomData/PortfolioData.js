@@ -103,15 +103,27 @@ export const projects = [
     githubUrl: `https://github.com/${githubUsername}`, // Example URL
     liveUrl: "https://tailwindpractic.netlify.app/",
   },
-  // {
-  //   title: "Data Visualization Dashboard",
-  //   description: "An interactive dashboard displaying complex datasets using various chart types.",
-  //   imageUrl: "https://picsum.photos/600/400?random=4",
-  //   imageHint: "charts graphs dashboard",
-  //   tags: ["React", "D3.js", "Express", "MongoDB"],
-  //   githubUrl: `https://github.com/${githubUsername}`, // Example URL
-  //   liveUrl: "#",
-  // },
+  {
+    title: "TodoMate",
+    description:
+      "TodoMate is an advanced task management application that empowers users to efficiently organize, track, and visualize their tasks. It offers features such as creating, editing, deleting, and categorizing todos, viewing tasks on an interactive map, monitoring completed tasks, and enhancing task details with AI-generated suggestions for improved productivity.",
+    imageUrl: "/images/TodoMate.png", // Replace with your project image
+    imageHint: "todo tasks map productivity",
+    tags: [
+      "React",
+      "Express",
+      "MongoDB",
+      "Zustand",
+      "React Query",
+      "Gemini API",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Zod",
+      "React Hook Form",
+    ],
+    githubUrl: `https://github.com/${githubUsername}`, // Replace with your GitHub repo
+    liveUrl: "https://ai-todo-app-vzj5.vercel.app/", // Add your deployed app link here
+  },
 ];
 
 // mobile Menu sidebar data
