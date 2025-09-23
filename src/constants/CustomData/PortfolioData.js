@@ -1,14 +1,11 @@
 const githubUsername = import.meta.env.VITE_GITHUB_USER_NAME;
 
 export const headlineData = `
- 
-
 Hi, 👋 I'm Mahendra Kumawat — a Frontend Developer specializing in building modern, interactive web applications using React, and a focus on great user experience.
 `;
 
 export const aboutSectionData = `
-I'm a passionate and detail-oriented Frontend Developer with a strong foundation in crafting modern, responsive web interfaces. I specialize in building intuitive user experiences using technologies like React, Next.js, and Tailwind CSS. While I'm early in my professional journey, I've already developed and deployed several web projects that reflect my commitment to clean design, performance, and accessibility.
-I enjoy turning ideas into real, user-friendly products—and I'm constantly learning to stay ahead in this ever-evolving field.
+I am a passionate and detail-oriented Full Stack Developer with expertise in the MERN stack (MongoDB, Express, React, Node.js). I specialize in building scalable, responsive, and high-performance web applications with a strong focus on intuitive user experiences. With hands-on experience in developing and deploying multiple projects, I ensure clean code, robust architecture, and best practices in performance, security, and accessibility. I enjoy transforming ideas into real, user-friendly products and continuously expanding my skills to stay ahead in the ever-evolving web development landscape.
 `;
 
 export const skills = [

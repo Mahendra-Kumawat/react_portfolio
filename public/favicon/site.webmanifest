@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "short_name": "MySite",
+  "short_name": "portfolio",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",

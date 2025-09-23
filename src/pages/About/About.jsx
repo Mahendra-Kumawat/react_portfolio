@@ -25,7 +25,7 @@ export function AboutSection() {
           isVisible && "animate-slide-up animation-delay-200"
         )}>
           <img
-            src="/images/Abouts.svg"
+            src="/images/me.svg"
             alt="About Me Image"
 
             className="rounded-lg  object-cover h-full w-full"

@@ -42,18 +42,17 @@ export function Header() {
         <div className="flex h-16  items-center justify-between">
           <NavLink
             to="/"
-            className="flex items-center gap-2 mr-6"
+            className="flex items-center gap-2 mr-6 py-1 text-white rounded-sm bg-purple-500 px-3"
             aria-label="Portfolio Pro Home"
           >
             <Code className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl">Mahendra</span>
+            <span className="font-bold text-3xl">Mahendra</span>
           </NavLink>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
             {navItems?.map(({ route, label }) => (
               <Button
-              
                 variant="ghost"
                 className="text-sm font-medium text-foreground hover:text-muted-foreground"
                 key={route}

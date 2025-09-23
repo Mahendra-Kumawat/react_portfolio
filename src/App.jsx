@@ -8,10 +8,9 @@ import { CopilotPopup } from "@copilotkit/react-ui";
 
 const App = () => {
   return (
-    <CopilotKit runtimeUrl="http://localhost:4000/copilotkit">
-      <BrowserRouter>
-       
-          <CopilotPopup
+    // <CopilotKit runtimeUrl="http://localhost:4000/copilotkit">
+    <BrowserRouter>
+      {/* <CopilotPopup
             instructions={
               "You are assisting the user as best as you can. Answer in the best way possible given the data you have."
             }
@@ -22,11 +21,11 @@ const App = () => {
             placement="top-left"
            
           />
-      
+       */}
 
-        <RouteConfig />
-      </BrowserRouter>
-    </CopilotKit>
+      <RouteConfig />
+    </BrowserRouter>
+    // </CopilotKit>
   );
 };
 
