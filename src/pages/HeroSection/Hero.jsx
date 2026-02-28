@@ -1,15 +1,12 @@
 import { Link } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-// import { useIsVisible } from '@/hooks/use-is-visible';
-// import { useRef } from 'react';
-import { cn } from "@/lib/utils";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router";
 import { headlineData } from "@/constants/CustomData/PortfolioData";
+import { ScrollReveal } from "@/components/custom/ScrollReveal";
 
 export function HeroSection() {
-  const isVisible = true;
   const githubUsername = import.meta.env.VITE_GITHUB_USER_NAME;
   const linkedinUsername = import.meta.env.VITE_MY_LINKEDIN_USER_NAME;
 
@@ -19,11 +16,9 @@ export function HeroSection() {
       className="relative z-40  pt-14 pb-10 md:pt-10 lg:pt-0 overflow-hidden"
     >
       <div className="grid grid-cols-1 pt-10 md:grid-cols-2  gap-6  items-center">
-        <div
-          className={cn(
-            "text-center md:text-left space-y-6 opacity-100 flex flex-col justify-center items-center md:items-start",
-            isVisible && "animate-fade-in animation-delay-200"
-          )}
+        <ScrollReveal
+          className="text-center md:text-left space-y-6 flex flex-col justify-center items-center md:items-start"
+          delay={0.1}
         >
           <div className="text-sm relative   text-purple-400 font-bold leading-2 tracking-wide border-[2px] border-purple-400 rounded-lg flex justify-start gap-2 w-fit items-center py-3 px-3 ">
             <span className="h-3 w-3 absolute top-[50%] translate-y-[-50%] animate-ping rounded-full bg-purple-400"></span>
@@ -92,17 +87,15 @@ export function HeroSection() {
               </NavLink>
             </span>
           </div>
-        </div>
-        <div
-          className={cn(
-            "relative flex justify-center bg-transparent items-center opacity-100",
-            isVisible && "animate-fade-in animation-delay-400"
-          )}
+        </ScrollReveal>
+        <ScrollReveal
+          className="relative flex justify-center bg-transparent items-center"
+          delay={0.25}
         >
           {/* Placeholder for a professional photo or illustration */}
           <div className="overflow-hidden w-xl">
             <img
-              src="/images/Coder.svg" // Replace with your image path
+              src="/images/Young man working with good idea.png" // Replace with your image path
               alt="Your Name - Professional Photo"
               // width={400}
               // height={400}
@@ -112,7 +105,7 @@ export function HeroSection() {
               data-ai-hint="professional headshot"
             />
           </div>
-        </div>
+        </ScrollReveal>
       </div>
       {/* Subtle animated arrow pointing down */}
       <div className="absolute bottom-0  left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
