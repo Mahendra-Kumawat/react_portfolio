@@ -10,14 +10,11 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-// import { useIsVisible } from '@/hooks/use-is-visible';
-// import { useRef } from 'react';
 import { FaGithubSquare } from "react-icons/fa";
 import { projects } from "@/constants/CustomData/PortfolioData";
 import { ScrollReveal } from "@/components/custom/ScrollReveal";
 
 export function ProjectsSection() {
-  // const sectionRef = useRef<HTMLDivElement>(null);
   return (
     <section id="projects" className="pt-24">
       <ScrollReveal
@@ -36,7 +33,6 @@ export function ProjectsSection() {
                   alt={project.title}
                   className="object-cover object-center h-full w-full"
                   loading="lazy"
-                  //  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   data-ai-hint={project.imageHint}
                 />
               </div>

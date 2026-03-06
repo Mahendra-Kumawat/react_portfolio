@@ -1,13 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-// import { Code, Database, Server, Cloud, PencilRuler } from 'lucide-react'; // Example icons
-// import { useIsVisible } from '@/hooks/use-is-visible';
-// import { useRef } from 'react';
 import { skills } from "@/constants/CustomData/PortfolioData";
 import { ScrollReveal } from "@/components/custom/ScrollReveal";
 
 export function SkillsSection() {
-  // const sectionRef = useRef<HTMLDivElement>(null);
   return (
     <section id="skills" className="pt-24">
       <ScrollReveal
@@ -23,7 +19,6 @@ export function SkillsSection() {
             <ScrollReveal key={index} delay={0.08 * (index + 1)}>
               <Card className="bg-background shadow-md hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="flex flex-row items-center gap-4 pb-4">
-                  {/* <category.icon className="h-8 w-8 text-primary" /> */}
                   <CardTitle className="text-xl text-center block font-semibold">
                     {category.title}
                   </CardTitle>

@@ -1,5 +1,4 @@
 import React, { useTransition } from "react";
-// import { zodResolver } from "@hookform/resolvers/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import z from "zod";
@@ -21,11 +20,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-// import { useToast } from "@/hooks/use-toast";
-// import { sendEmailAction } from "@/app/actions"; // We'll create this action next
 import { Mail, Phone, MapPin } from "lucide-react";
-// import { useIsVisible } from '@/hooks/use-is-visible';
-// import { useRef } from 'react';
 import { Link } from "react-router";
 import { ScrollReveal } from "@/components/custom/ScrollReveal";
 
@@ -45,8 +40,6 @@ const formSchema = z.object({
 });
 
 export function ContactSection() {
-  // const { toast } = useToast();
-  // const sectionRef = useRef < HTMLDivElement > (null);
   const [isPending, startTransition] = useTransition();
   const emailAddress = import.meta.env.VITE_MY_EMAIL;
   const phoneNumber = import.meta.env.VITE_CONTACT_NUMBER;
@@ -67,29 +60,6 @@ export function ContactSection() {
   };
 
   async function onSubmit(formData) {
-    // setIsSubmitting(true);
-    // try {
-    //   const result = await sendEmailAction(values);
-    //   if (result.success) {
-    //     // toast({
-    //     //   title: "Message Sent!",
-    //     //   description: "Thank you for reaching out. I'll get back to you soon.",
-    //     // });
-    //     form.reset(); // Reset form after successful submission
-    //   } else {
-    //     throw new Error(result.error || "Failed to send message.");
-    //   }
-    // } catch (error) {
-    //   console.error("Failed to send email:", error);
-    //   // toast({
-    //   //   title: "Error Sending Message",
-    //   //   description: error instanceof Error ? error.message : "Something went wrong. Please try again later.",
-    //   //   variant: "destructive",
-    //   // });
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
-
     startTransition(async () => {
       await wait();
       console.log(formData);
@@ -213,12 +183,12 @@ export function ContactSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-primary" />
-              <Link
+              <a
                 href={`mailto:${emailAddress}`}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 {emailAddress}
-              </Link>
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-primary" />

@@ -97,11 +97,8 @@ export function HeroSection() {
             <img
               src="/images/Young man working with good idea.png" // Replace with your image path
               alt="Your Name - Professional Photo"
-              // width={400}
-              // height={400}
-              loading="lazy"
+              fetchpriority="high"
               className="object-cover w-full h-full"
-              // fetchPriority='high'
               data-ai-hint="professional headshot"
             />
           </div>
